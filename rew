@@ -1,0 +1,41 @@
+#include <iostream>
+#include <vector>
+#include <ctime>
+#include <algorithm>
+
+
+using namespace std;
+
+int main()
+{
+
+	vector<string> vs;
+
+	cout << "введите 3 слова";
+	for (int i = 0; i < 3; i++)
+	{
+ 
+		string s;
+		cin >> s;
+		vs.push_back(s);
+	}
+
+	for (auto item : vs)
+	{
+		cout << item << " ";
+	}
+	cout << endl;
+
+	sort(begin(vs), end(vs));
+	for (auto item : vs)
+	{
+		cout << item << " ";
+	}
+	cout << endl;
+
+	int os = count(begin(vs[0]), end(vs[0]), 'o');
+	cout << "first word has " << os << " letter o's ";
+
+	return 0;
+
+}
